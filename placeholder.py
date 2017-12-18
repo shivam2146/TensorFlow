@@ -1,0 +1,10 @@
+import tensorflow as tf
+a= tf.placeholder(tf.float32,name="hh")
+b= tf.placeholder(tf.float32,name="cvs")
+adr= tf.add(a,b,name="adder")
+sess= tf.Session()
+output= sess.run(adr,{a:3,b:4.5})
+print(output)
+writer=tf.summary.FileWriter('./my_graph',sess.graph)
+writer.close()
+sess.close()
