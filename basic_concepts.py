@@ -1,7 +1,7 @@
 import tensorflow as tf
 
 def try1():
-    x= tf.constant(5.2)
+    x= tf.constant(5.2,shape=(2,2)) #Good practice to define shape as well
     y= tf.Variable([0])     #must always be assigned a default value
     y = y.assign([5])
     with tf.Session() as sess:
